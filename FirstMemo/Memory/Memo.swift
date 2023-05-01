@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class Memo: Identifiable, ObservedObject {
+class Memo: Identifiable, ObservableObject {
     let id : UUID //Identifiable이 요구하는 속성
     @Published var content: String //메모 저장하는 속성, Published 특성을 추가하면 새로운 값을 저장할 때 마다 바인딩 되어있는 UI가 자동 업데이트된다
     let insertDate: Date
