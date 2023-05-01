@@ -16,6 +16,8 @@
 		FF668CB329FF962700EC1F33 /* FirstMemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF668CB229FF962700EC1F33 /* FirstMemoUITests.swift */; };
 		FF668CB529FF962700EC1F33 /* FirstMemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF668CB429FF962700EC1F33 /* FirstMemoUITestsLaunchTests.swift */; };
 		FF668CC229FF982600EC1F33 /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF668CC129FF982600EC1F33 /* MainListView.swift */; };
+		FF668CC629FF98AD00EC1F33 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF668CC529FF98AD00EC1F33 /* Memo.swift */; };
+		FF668CC829FF99C500EC1F33 /* MemoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF668CC729FF99C500EC1F33 /* MemoStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		FF668CB229FF962700EC1F33 /* FirstMemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstMemoUITests.swift; sourceTree = "<group>"; };
 		FF668CB429FF962700EC1F33 /* FirstMemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstMemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FF668CC129FF982600EC1F33 /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
+		FF668CC529FF98AD00EC1F33 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		FF668CC729FF99C500EC1F33 /* MemoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,8 @@
 		FF668CC429FF985100EC1F33 /* Memory */ = {
 			isa = PBXGroup;
 			children = (
+				FF668CC529FF98AD00EC1F33 /* Memo.swift */,
+				FF668CC729FF99C500EC1F33 /* MemoStore.swift */,
 			);
 			path = Memory;
 			sourceTree = "<group>";
@@ -282,9 +288,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF668C9729FF962200EC1F33 /* FirstMemo.xcdatamodeld in Sources */,
+				FF668CC829FF99C500EC1F33 /* MemoStore.swift in Sources */,
 				FF668CC229FF982600EC1F33 /* MainListView.swift in Sources */,
 				FF668C9229FF962200EC1F33 /* FirstMemoApp.swift in Sources */,
 				FF668C9429FF962200EC1F33 /* Persistence.swift in Sources */,
+				FF668CC629FF98AD00EC1F33 /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
