@@ -5,6 +5,8 @@
 //  Created by 김서영 on 2023/05/01.
 //
 
+//가독성을 위해 View는 가능한 잘게 쪼개는 것이 좋음
+
 import SwiftUI
 
 struct MainListView: View {
@@ -13,15 +15,7 @@ struct MainListView: View {
         NavigationView { //shift+cmd+A : action추가
             //swiftUI는 modifierUI이라는 method를 이용해 필요한 속성을 바꾸거나 view를 조작함
             List(store.list) { memo in
-                VStack(alignment: .leading) { //verticalStack의 준말
-                    //alignment: .leading 왼쪽정렬
-                    Text(memo.content)
-                        .font(.body)
-                        .lineLimit(1) //메모내용을 한줄만 보여주고 뒷부분은 ...로 생략처리
-                    Text(memo.insertDate, style: .date)
-                        .font(.caption) //caption
-                        .foregroundColor(.secondary)
-                }
+                MemoCell(memo: memo)
             }
             //.listStyle(.plain) //리스트 스타일이 여백없이 꽉채움
             .navigationTitle("My Memo")
