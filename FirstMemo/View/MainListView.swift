@@ -17,7 +17,12 @@ struct MainListView: View {
         NavigationView { //shift+cmd+A : action추가
             //swiftUI는 modifierUI이라는 method를 이용해 필요한 속성을 바꾸거나 view를 조작함
             List(store.list) { memo in
-                MemoCell(memo: memo)
+                NavigationLink {
+                    DetailView(memo: memo)
+                } label: {
+                    MemoCell(memo: memo)
+                }
+
             } //memostore에 있는 파라미터를 list로 전달,Text로 메모내용표시
             //.listStyle(.plain) //리스트 스타일이 여백없이 꽉채움
             .navigationTitle("My Memo")

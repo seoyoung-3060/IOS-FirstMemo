@@ -26,6 +26,9 @@
 		FF668CD129FFA5C400EC1F33 /* ComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF668CD029FFA5C400EC1F33 /* ComposeView.swift */; };
 		FF668CD229FFA5C400EC1F33 /* ComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF668CD029FFA5C400EC1F33 /* ComposeView.swift */; };
 		FF668CD329FFA5C400EC1F33 /* ComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF668CD029FFA5C400EC1F33 /* ComposeView.swift */; };
+		FF668CD52A00E53000EC1F33 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF668CD42A00E53000EC1F33 /* DetailView.swift */; };
+		FF668CD62A00E53000EC1F33 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF668CD42A00E53000EC1F33 /* DetailView.swift */; };
+		FF668CD72A00E53000EC1F33 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF668CD42A00E53000EC1F33 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,7 @@
 		FF668CC729FF99C500EC1F33 /* MemoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStore.swift; sourceTree = "<group>"; };
 		FF668CCA29FFA50F00EC1F33 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 		FF668CD029FFA5C400EC1F33 /* ComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeView.swift; sourceTree = "<group>"; };
+		FF668CD42A00E53000EC1F33 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,7 @@
 				FF668CCA29FFA50F00EC1F33 /* MemoCell.swift */,
 				FF668CC129FF982600EC1F33 /* MainListView.swift */,
 				FF668CD029FFA5C400EC1F33 /* ComposeView.swift */,
+				FF668CD42A00E53000EC1F33 /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF668CCB29FFA50F00EC1F33 /* MemoCell.swift in Sources */,
+				FF668CD52A00E53000EC1F33 /* DetailView.swift in Sources */,
 				FF668C9729FF962200EC1F33 /* FirstMemo.xcdatamodeld in Sources */,
 				FF668CC829FF99C500EC1F33 /* MemoStore.swift in Sources */,
 				FF668CC229FF982600EC1F33 /* MainListView.swift in Sources */,
@@ -325,6 +331,7 @@
 				FF668CA929FF962700EC1F33 /* FirstMemoTests.swift in Sources */,
 				FF668CD229FFA5C400EC1F33 /* ComposeView.swift in Sources */,
 				FF668CCE29FFA5B100EC1F33 /* MainListView.swift in Sources */,
+				FF668CD62A00E53000EC1F33 /* DetailView.swift in Sources */,
 				FF668CCC29FFA50F00EC1F33 /* MemoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF668CD329FFA5C400EC1F33 /* ComposeView.swift in Sources */,
+				FF668CD72A00E53000EC1F33 /* DetailView.swift in Sources */,
 				FF668CB329FF962700EC1F33 /* FirstMemoUITests.swift in Sources */,
 				FF668CCF29FFA5B200EC1F33 /* MainListView.swift in Sources */,
 				FF668CB529FF962700EC1F33 /* FirstMemoUITestsLaunchTests.swift in Sources */,
