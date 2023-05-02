@@ -25,6 +25,6 @@ struct MemoCell: View {
 
 struct MemoCell_Previews: PreviewProvider {
     static var previews: some View {
-        MemoCell(memo: Memo(content: "Test"))
+        MemoCell(memo: Memo(content: "Test")) //여기엔 그냥 더미데이터를 전달하면됨
     }
 }
