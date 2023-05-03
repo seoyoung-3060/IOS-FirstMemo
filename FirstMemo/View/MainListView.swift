@@ -22,7 +22,7 @@ struct MainListView: View {
                 } label: {
                     MemoCell(memo: memo)
                 }
-
+                
             } //memostore에 있는 파라미터를 list로 전달,Text로 메모내용표시
             //.listStyle(.plain) //리스트 스타일이 여백없이 꽉채움
             .navigationTitle("My Memo")

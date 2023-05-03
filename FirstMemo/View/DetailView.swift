@@ -21,6 +21,9 @@ struct DetailView: View {
     
     @EnvironmentObject var store: MemoStore
     
+    //쓰기누르면 편집 화면 모달로 표시할거임. 표시화면은 쓰기화면 표시 방법과 같음 = boolean속성필요
+    @State private var showComposer = false
+    
     var body: some View {
         VStack {
             ScrollView {
@@ -40,12 +43,28 @@ struct DetailView: View {
         }
         .navigationTitle("메모보기")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItemGroup(placement: .navigation) {
+                Button {
+                    showComposer = true
+                } label: {
+                    Image(systemName: "square.and.pencil")
+                }
+
+            }
+        }
+        .sheet(isPresented: $showComposer) {
+            ComposeView(memo: memo) //initializer로 memo 전달
+        }
     }
 }
 
+//미리보기
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(memo: Memo(content: "Hello"))
-            .environmentObject(MemoStore())
+        NavigationView {
+            DetailView(memo: Memo(content: "Hello"))
+                .environmentObject(MemoStore())
+        }
     }
 }
