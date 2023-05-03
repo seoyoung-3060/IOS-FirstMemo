@@ -16,14 +16,22 @@ struct MainListView: View {
     var body: some View {
         NavigationView { //shift+cmd+A : action추가
             //swiftUI는 modifierUI이라는 method를 이용해 필요한 속성을 바꾸거나 view를 조작함
-            List(store.list) { memo in
-                NavigationLink {
-                    DetailView(memo: memo)
-                } label: {
-                    MemoCell(memo: memo)
-                }
+            /*
+             list에서 delete 구현시 ondelete로 구현하는데
+             list 뒤에가 아니라 foreach에 추가해야함
+             */
+            List {
+                ForEach(store.list) { memo in
+                    NavigationLink {
+                        DetailView(memo: memo)
+                    } label: {
+                        MemoCell(memo: memo)
+                    }
+                    
+                } //memostore에 있는 파라미터를 list로 전달,Text로 메모내용표시
+                .onDelete(perform: store.delete)
                 
-            } //memostore에 있는 파라미터를 list로 전달,Text로 메모내용표시
+            } //sheet modifier은 binding한 속성에 true가 전달되면 클로저를 실행하고 클로저에서 return한 view를 모달방식으로 보여줌
             //.listStyle(.plain) //리스트 스타일이 여백없이 꽉채움
             .navigationTitle("My Memo")
             .toolbar {
@@ -35,8 +43,9 @@ struct MainListView: View {
             }
             .sheet(isPresented: $showComposer) { //showcomposer전달할건데 함수가 binding타입이라 $를 붙여줘야함
                 ComposeView()
-            } //sheet modifier은 binding한 속성에 true가 전달되면 클로저를 실행하고 클로저에서 return한 view를 모달방식으로 보여줌
+            }
         }
+        .navigationViewStyle(.stack)
     }
 }
 

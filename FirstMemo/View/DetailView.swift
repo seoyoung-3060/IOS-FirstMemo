@@ -23,6 +23,9 @@ struct DetailView: View {
     
     //쓰기누르면 편집 화면 모달로 표시할거임. 표시화면은 쓰기화면 표시 방법과 같음 = boolean속성필요
     @State private var showComposer = false
+    @State private var showDeleteAlert = false
+    
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         VStack {
@@ -44,7 +47,24 @@ struct DetailView: View {
         .navigationTitle("메모보기")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarItemGroup(placement: .navigation) {
+            ToolbarItemGroup(placement: .bottomBar) {
+                Button {
+                    showDeleteAlert = true
+                } label: {
+                    Image(systemName: "trash")
+                }
+                .foregroundColor(.red)
+                .alert("DeleteConfirm", isPresented: $showDeleteAlert) {
+                    Button(role: .destructive) {
+                        store.delete(memo: memo)
+                        dismiss()
+                    } label: {
+                        Text("delete")
+                    }
+                    //role을 destructive에 저장하는 이유 : content에 맞게 적절한 위치에 표시되기 때문 + 컬러를 따로 지정안해도 빨간색으로 표시됨
+                } message: {
+                    Text("Do you want to Delete?")
+                } //cancel 버튼은 자동으로 추가돼서 직접 추가할필요X
                 Button {
                     showComposer = true
                 } label: {
